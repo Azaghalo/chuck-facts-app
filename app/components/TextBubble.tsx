@@ -2,6 +2,7 @@ import React from "react";
 
 interface Props {
   joke: string;
+  onClick: () => void;
 }
 
 const TextBubble = (props: Props) => {
@@ -15,8 +16,9 @@ const TextBubble = (props: Props) => {
       </div>
       <div className="mt-auto self-end">
         <button
-          className="btn bg-primary border-none text-white"
-          onClick={() => console.log("TESTE")}
+          className="btn bg-primary border-none text-white disabled:text-gray-700"
+          onClick={props.onClick}
+          disabled={props.joke === ""}
         >
           Like
         </button>
