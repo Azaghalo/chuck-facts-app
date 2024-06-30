@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="pt-BR" data-theme="forest">
       <body className={inter.className}>
         <Header />
-        <div className="max-w-6xl m-auto">{children}</div>
+        <div className="max-w-5xl m-auto">{children}</div>
       </body>
     </html>
   );
